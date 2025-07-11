@@ -1,3 +1,8 @@
+// First Transpose the Matrix
+// Then Reverse each row
+
+
+
 class Solution {
     public void rotate(int[][] matrix) {
         int sz=matrix.length;
