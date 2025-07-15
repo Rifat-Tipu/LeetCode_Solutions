@@ -1,46 +1,48 @@
-<h2><a href="https://leetcode.com/problems/valid-word/">2047. Number of Valid Words in a Sentence</a></h2>
+<h2><a href="https://leetcode.com/problems/valid-word/">3136. Valid Word</a></h2>
 <h3>Easy</h3>
 <hr>
-<p>A sentence consists of lowercase letters (<code>'a'</code> to <code>'z'</code>), digits (<code>'0'</code> to <code>'9'</code>), hyphens (<code>'-'</code>), punctuation marks (<code>'!'</code>, <code>'.'</code>, <code>','</code>), and spaces.</p>
-
-<p>You are given a string <code>sentence</code> representing a sentence. You need to count the number of <strong>valid words</strong> in it.</p>
-
-<p>A <strong>valid word</strong> meets the following criteria:</p>
+<p>A word is considered <strong>valid</strong> if:</p>
 
 <ul>
-  <li>Only contains lowercase letters, hyphens, and/or punctuation marks.</li>
-  <li>Contains at most one hyphen. If present, it must be surrounded by lowercase letters (i.e., not at the start or end and not adjacent to punctuation or digits).</li>
-  <li>Contains at most one punctuation mark. If present, it must be at the end of the word.</li>
-  <li>Does <strong>not</strong> contain any digits.</li>
+  <li>It contains a minimum of <strong>3 characters</strong>.</li>
+  <li>It contains only <strong>digits (0-9)</strong> and <strong>English letters</strong> (uppercase and lowercase).</li>
+  <li>It includes at least <strong>one vowel</strong>.</li>
+  <li>It includes at least <strong>one consonant</strong>.</li>
 </ul>
 
-<p>Return the number of valid words in <code>sentence</code>.</p>
+<p>You are given a string <code>word</code>. Return <code>true</code> if <code>word</code> is valid, otherwise return <code>false</code>.</p>
+
+<p><strong>Notes:</strong></p>
+<ul>
+  <li><code>'a'</code>, <code>'e'</code>, <code>'i'</code>, <code>'o'</code>, <code>'u'</code> and their uppercase counterparts are considered vowels.</li>
+  <li>A consonant is an English letter that is not a vowel.</li>
+</ul>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 <pre>
-<strong>Input:</strong> sentence = "cat and  dog"
-<strong>Output:</strong> 3
-<strong>Explanation:</strong> The valid words in the sentence are "cat", "and", and "dog".
+<strong>Input:</strong> word = "234Adas"
+<strong>Output:</strong> true
+<strong>Explanation:</strong> This word satisfies all the conditions.
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
 <pre>
-<strong>Input:</strong> sentence = "!this 1-s b8d!"
-<strong>Output:</strong> 0
-<strong>Explanation:</strong> None of the words are valid.
+<strong>Input:</strong> word = "b3"
+<strong>Output:</strong> false
+<strong>Explanation:</strong> The length is less than 3 and it doesn't contain a vowel.
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
 <pre>
-<strong>Input:</strong> sentence = "alice and  bob are playing stone-game10"
-<strong>Output:</strong> 5
+<strong>Input:</strong> word = "a3$e"
+<strong>Output:</strong> false
+<strong>Explanation:</strong> The word contains an invalid character '$' and does not contain a consonant.
 </pre>
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 <ul>
-  <li><code>1 &lt;= sentence.length &lt;= 1000</code></li>
-  <li><code>sentence</code> includes only lowercase English letters, digits, hyphens, punctuation, and spaces.</li>
-  <li>There will be at least 1 word in <code>sentence</code>.</li>
+  <li><code>1 &lt;= word.length &lt;= 20</code></li>
+  <li><code>word</code> consists of English uppercase and lowercase letters, digits, <code>'@'</code>, <code>'#'</code>, and <code>'$'</code>.</li>
 </ul>
